@@ -1,0 +1,114 @@
+.heroSection {
+    padding: 10px 44px !important;
+    & .leftPart {
+        & .tryNowBox {
+            border-radius: 24px;
+            background-color: #FFF;
+            padding: 46px 60px 44px 26px;
+            & .boxHeading {
+                color: #4B8991;
+                font-size: 28px;
+                font-family: Kreon;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            & .boxText {
+                color: var(--stilleto, #2D2D2D);
+                font-size: 24px;
+                font-family: Kreon;
+                margin-bottom: 33px;
+            }
+            & .tryNowBtn {
+                border-radius: 8px;
+                background-color:#2D2D2D;
+                color: #fff;
+                font-size: 18px;
+                font-family: Kreon;
+                font-weight: 600;
+                transition: all 0.3s ease-in-out;
+                padding: 9px 30px;
+                border: none;
+                &:hover {
+                    background-color: darken(#2D2D2D, 2);
+                }
+            }
+            & .imgBox {
+                width: 123px;
+                height: 123px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    & .rightPart {
+        & .wordsMatterBox {
+            border-radius: 24px;
+            border: 1px solid #C2C0C5;
+            background-color: #FFF;
+            padding: 30px 36px;
+            position: relative;
+            & .closeBtn {
+                position: absolute;
+                top: 25px;
+                right: 26px;
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                overflow: hidden;
+                background-color: #EFEFEF;
+                padding: 5px;
+            }
+            & .boxHeading {
+                color: #526B55;
+                font-size: 28px;
+                font-family: Kreon;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            & .boxSubHeading {
+                color:  #2D2D2D;
+                font-size: 24px;
+                font-family: Kreon;
+            }
+        }
+        & .roundTablesBox {
+            border-radius: 24px;
+            border: 1px solid #F6E6D3;
+            background-color: rgba(231, 210, 182, 0.20);
+            padding: 23px 36px;
+            & .boxHeading {
+                color: #BB852C;
+                font-size: 28px;
+                font-family: Kreon;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            & .card {
+                border-radius: 24px;
+                border: 1px solid #526B55;
+                background: rgba(255, 255, 255, 0.60);
+                padding: 27px 22px 19px 22px;
+                &.active {
+                    border-color: #BB852C;
+                }
+                & .cardImg {
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    & img {
+                        width: 100%;
+                    }
+                }
+                & .cardHeading {
+                    color: #2D2D2D;
+                    text-align: center;
+                    font-size: 24px;
+                    font-family: Khula;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

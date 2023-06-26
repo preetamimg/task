@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'Kreon';
+    src: url('font/Kreon-Bold.woff2') format('woff2'),
+        url('font/Kreon-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kreon';
+    src: url('font/Kreon-Medium.woff2') format('woff2'),
+        url('font/Kreon-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kreon';
+    src: url('font/Kreon-Regular.woff2') format('woff2'),
+        url('font/Kreon-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kreon';
+    src: url('font/Kreon-Light.woff2') format('woff2'),
+        url('font/Kreon-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kreon';
+    src: url('font/Kreon-SemiBold.woff2') format('woff2'),
+        url('font/Kreon-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@import 'index';
+
+
+body {
+    font-family:'Kreon' ;
+    height: 100vh;
+    padding: 0;
+    margin: 0
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    & .topBox {
+        border-bottom: 2px solid #E7D2B6;
+        & .navbar {
+            background-color: #FEF9F1;
+            & .navbar-brand {
+                padding: 0;
+                height: 82px;
+                margin-left: 10px;
+            }
+            & .searchBox {
+                & .input-group {
+                    position: relative;
+                    min-width: 737px;
+                    width: 100%;
+                    & .btn {
+                        width: 28px;
+                        height: 28px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 19px;
+                        left: 25px;
+                        padding: 0;
+                        z-index: 1;
+                        border: none;
+                        &:active {
+                            border: none;
+                        }
+                    }
+                    & input {
+                        width: 100%;
+                        height: 64px;
+                        background: #FFFFFF;
+                        border: 1px solid #E7D2B6;
+                        border-radius: 100px !important;
+                        padding: 12px 12px 12px 67px;
+                        box-shadow: none;
+                        position: relative;
+                        z-index: 0;
+                    }
+                }
+            }
+            & .bookBox {
+                background-image: url('/image/btn-bg.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                display: flex;
+                padding: 12px 25px;
+                border-radius: 50%;
+                align-items: center;
+                gap: 15px;
+                & .bookBtn {
+                    border: 2px solid #E7D2B6;
+                    font-size: 16px;
+                    font-weight: 700;
+                    padding: 16px 22px;
+                    border-radius: 26px;
+                    line-height: normal;
+                    transition: all 0.3s ease-in-out;
+                    background-color: #ffffff;
+                    &:hover {
+                        background-color: darken(#FEF9F1, 2);
+                    }
+                }
+                & .downloadAppBtn {
+                    height: 42px;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    & .mainInner {
+        & .sideBar {
+            width: 112px;
+            background-color: #F5E9DB;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            & .sideTopBox {
+                overflow-y: auto;
+                & ul {
+                    padding: 0;
+                    list-style: none;
+                    margin: 0;
+                    & li {
+                        &.active {
+                            background-color: rgba(231, 210, 182, 0.4);
+                            border-right: 2px solid #000;
+                        }
+                        padding: 15px 10px;
+                        & a {
+                            // font-family: 'Khula';
+                            // font-style: normal;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 26px;
+                            text-align: center;
+                            color: #000000;
+                            text-decoration: none;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            & img {
+                                max-width: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            & .sideBottomBox {
+                padding-bottom: 15px;
+                & ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    & li {
+                        padding: 15px 10px;
+                        & a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100;
+                            & img {
+                                max-width: 30px;
+                            }
+                        }
+                        &:first-child {
+                            & a {
+                                border-top: 2px solid #E7D2B6;
+                                padding-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .rightSideBar {
+            width: calc(100% - 112px);
+            background-color: #fefaf1;
+            & .rightInner {
+                width: 100%;
+            }
+            & .bottomBar {
+                height: 112px;
+                width: 100%;
+                background-color: #BFCBBD;
+                padding: 24px 48px;
+                & .bottomBarInner {
+                    justify-content: space-between;
+                    & .albumImg {
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 12px;
+                        background-color: #fff;
+                        margin-right: 26px;
+                    }
+                    & .musicName {
+                        margin-right: 16px;
+                        color: #000;
+                        text-align: center;
+                        font-size: 28px;
+                        // font-family: Khula;
+                        font-weight: 600;
+                    }
+                    & .coachName {
+                        color: #000;
+                        font-size: 20px;
+                        // font-family: Khula;
+                    }
+                    & .playBtn {
+                        margin-right: 20px;
+                        width: 48px;
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        border: none;
+                        background-color: transparent;
+                    }
+                    & .timingText {
+                        margin-right: 26px;
+                        color: #000;
+                        font-size: 24px;
+                        // font-family: Khula;
+                        font-weight: 300;
+                    }
+                    & .playerProgress {
+                        & .progress {
+                            background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
+                            // border: solid 2px #82CFD0;
+                            border-radius: 8px;
+                            height: 7px;
+                            width: 400px;
+                            outline: none;
+                            transition: background 450ms ease-in;
+                            -webkit-appearance: none;
+                            &::-webkit-slider-thumb {
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                -webkit-appearance: none;
+                                cursor: ew-resize;
+                                background: #434343;
+                              }
+                        }
+                        // & .progress {
+                        //     background: linear-gradient(to right, #526B55 0%, #526B55 40%, #526B55 40%, #526B55 100%);
+                        //     // border: solid 2px #82CFD0;
+                        //     border-radius: 8px;
+                        //     height: 7px;
+                        //     width: 400px;
+                        //     outline: none;
+                        //     transition: background 450ms ease-in;
+                        //     -webkit-appearance: none;
+                        //     box-shadow: none;
+                        //     &::-webkit-slider-thumb {
+                        //         width: 20px;
+                        //         height: 20px;
+                        //         border-radius: 50%;
+                        //         -webkit-appearance: none;
+                        //         cursor: ew-resize;
+                        //         background: #526B55;
+                        //       }
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+
